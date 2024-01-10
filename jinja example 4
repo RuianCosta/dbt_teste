@@ -1,0 +1,46 @@
+{#
+{% set my_cool_string = 'wow cool!' %}
+{% set my_second_cool_string = 'This is jinja'%}
+{% set my_cool_number = 100 %}
+
+{{ my_cool_string }} {{ my_second_cool_string }} I want to write jinja for {{ my_cool_number}} for years!
+#}
+{#
+{% set my_animals = ['lemur', 'wolf', 'panther', 'tardigrade'] %}
+
+{{ my_animals[0] }}
+{{ my_animals[1] }}
+{{ my_animals[2] }}
+{{ my_animals[3] }}
+#}
+{#
+{% set my_animals = ['lemur', 'wolf', 'panther', 'tardigrade'] %}
+
+{{ my_animals[0] }}
+
+{% for animal in my_animals %}
+
+My favorite animal is the {{animal}} 
+{% endfor %}
+
+#}
+{#
+{% set temperature = 85 %}
+
+{% if temperature < 65 %}
+  Time for a cappuccino!
+{% else %}
+   Time for a cold brew!
+{% endif %}
+
+#}
+{%- set foods = ["carrot", "hotdog", "cucumber", "bell pepper"] -%}
+
+{% for food in foods -%}
+    {%- if foood == "hotdog" -%} {%- set food_type = "snack" -%}
+    {%- else -%} {%- set food_type = "vegetable" -%}
+    {%- endif -%}
+
+    the humble {{ food }} is my favorite {{ food_type }}
+
+{% endfor %}
