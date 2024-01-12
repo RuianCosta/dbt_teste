@@ -1,5 +1,0 @@
-{% set my_cool_string = "wow! cool!" %}
-{% set my_second_cool_string = "this is jinja!" %}
-
-{{ my_cool_string }}
-{{ my_second_cool_string }}
